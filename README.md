@@ -21,7 +21,7 @@ To get started with the API:
 3. Sign in with your new Square account and register your new application on Square's [developer portal](https://connect.squareup.com/apps). 
   * To register your application, click **New Application**, enter a name, and click **Create App**. This is your developer portal, and you'll need to come back here later. For now, take note of your **Application ID** under the **Credentials** tab
 4. Follow the instructions for getting started with the Point of Sale API for Android [here](https://docs.connect.squareup.com/articles/point-of-sale-api-android) NOTE: you can start with the second step (Obtain your app's SHA-1 fingerprint) since we've already registered our Application name.
-5. Following the instructions in the documentation, link up the button in `MainActivity` to a POS API call in the `MainActivity`'s `onCreate` method. Receive the result from the Point of Sale transaction in the `onActivityResult` method.
+5. Following the instructions in the [documentation](https://docs.connect.squareup.com/articles/point-of-sale-api-android), link up the button in `MainActivity` to a POS API call in the `MainActivity`'s `onCreate` method. Receive the result from the Point of Sale transaction in the `onActivityResult` method.
 6. If the transaction result was a success, start the Photobooth activity.
 7. Try it out! You can test by taking cash payments, or use the provided Square readers to take card payments and refund yourself later.
 
