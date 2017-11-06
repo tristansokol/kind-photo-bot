@@ -25,7 +25,7 @@ To get started with the API:
 6. If the transaction result was a success, start the Photobooth activity.
 7. Try it out! You can test by taking cash payments, or use the provided Square readers to take card payments and refund yourself later.
 
-## Step 2: Take Pictures
+## Step 3: Take Pictures
 
 1. Add a button in `SnapActivity` to take a picture using <a href="https://developers.google.com/android/reference/com/google/android/gms/vision/CameraSource.html#takePicture(com.google.android.gms.vision.CameraSource.ShutterCallback, com.google.android.gms.vision.CameraSource.PictureCallback)">CameraSource#takePicture</a>
 2. In the picture callback, you're provided with a `byte[]` containing the captured photo. Here's how we turn it into the final bitmap to print.
@@ -50,7 +50,7 @@ toast.show();
 
   ```
 
-## Step 3: Add printing
+## Step 4: Add printing
 
 1. Visit [this Google Cloud Print link](https://www.google.com/cloudprint/addpublicprinter.html?printerid=e2289732-f1e8-7440-c1ce-1a6eb16882c3&key=783088520) and sign in with the Google account on your device. This will make our printer available on your device.
 2. Display the printer selection activity using `PrintHelper`:
