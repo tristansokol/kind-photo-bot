@@ -1,10 +1,10 @@
 # Build Your Own Cash flow Positive Photobooth!
 
-Feel free to ask us for help at any time during this workshop session! 
+This repo was used for a workshop during DroidCon SF 2017
 
 ## Step 1: Set up
 
-1. Clone this repository: `git clone git@github.com:square/kind-photo-bot.git` 
+1. Clone this repository: `git clone https://github.com/square/kind-photo-bot.git` 
 2. Open the project with Android Studio (3.0)
 3. Connect a device and run the app
 
@@ -37,24 +37,23 @@ To get started with the API:
   * Release the `FaceDetector`
   * Display the photo in a `Toast`. Create a `toast.xml` layout that contains an `ImageView` with id `picture_view`, then:
 
-  ```
-Toast toast = new Toast(activity);
-toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-toast.setDuration(Toast.LENGTH_SHORT);
-LayoutInflater inflater = LayoutInflater.from(activity);
-View toastView = inflater.inflate(R.layout.toast, null);
-ImageView pictureView = content.findViewById(R.id.picture_view);
-pictureView.setImageBitmap(bitmap);
-toast.setView(toastView);
-toast.show();
-
+  ```java
+  Toast toast = new Toast(activity);
+  toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+  toast.setDuration(Toast.LENGTH_SHORT);
+  LayoutInflater inflater = LayoutInflater.from(activity);
+  View toastView = inflater.inflate(R.layout.toast, null);
+  ImageView pictureView = content.findViewById(R.id.picture_view);
+  pictureView.setImageBitmap(bitmap);
+  toast.setView(toastView);
+  toast.show();
   ```
 
 ## Step 4: Add printing
 
 1. Visit [this Google Cloud Print link](https://www.google.com/cloudprint/addpublicprinter.html?printerid=e2289732-f1e8-7440-c1ce-1a6eb16882c3&key=783088520) and sign in with the Google account on your device. This will make our printer available on your device.
 2. Display the printer selection activity using `PrintHelper`:
-```
+```java
   PrintHelper photoPrinter = new PrintHelper(activity);
   photoPrinter.setScaleMode(PrintHelper.SCALE_MODE_FIT);
   photoPrinter.printBitmap("awesome_photo.jpg", bitmap, () -> activity.finish());
